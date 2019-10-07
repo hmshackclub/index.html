@@ -32,7 +32,7 @@
     
     <script>
     var zombie_map;
-    var score;
+    var score = 0;
     var tolerance = 1;
     var old_position;
     var all_markers = [];
@@ -109,6 +109,14 @@ else {
             what_is_it = what_is_it.replace(".png", "");
             alert("Found the " + what_is_it );
             all_markers[i].setMap(null);
+          
+            if (what_is_it == "zombie") {
+              alert("roawr roar growl, you've ran into a zombie!");
+              score -= 300;
+              
+            else if (what_is_it == ("diamond") {
+              alert("Ooo shoot, a DIAMOND!");
+              score += 450;
           }
     }
           
