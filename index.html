@@ -5,19 +5,18 @@
       <meta name="keywords" content="Zombie, Whangamata, map">
       <meta name="author" content="Ian Fulton">
       
-    <nav class="controls">
-			<a href="#" class="button" onClick="stopwatch.start();">Start</a>
-			<a href="#" class="button" 
-    
       <style>
- #zombie_map {
-            width: 600px;
-            height: 400px;
-            background-color: grey;
+#zombie_map {
+    height: 100%;
+    width: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;  
+    background-color: grey;
+}
 </style>
   </head>
     
-  
   <body style="background-color:#9BDCB7;">
     <div id="zombie_map"></div>
       
@@ -33,7 +32,7 @@
     
     <script>
     var zombie_map;
-    var score = 0;
+    var score;
     var tolerance = 1;
     var old_position;
     var all_markers = [];
@@ -57,7 +56,7 @@
             37.840873 -122.232917 zombie.png
             37.840873 -122.232917 zombie.png
             37.841103 -122.232619 swords.png
-            37.832201 -122.233619 swords.png
+            37.832201 -122.233619 swords. png
             37.841289 -122.232585 hospital.png`;
     var markers = data.split("\n");
     
@@ -110,16 +109,8 @@ else {
             what_is_it = what_is_it.replace(".png", "");
             alert("Found the " + what_is_it );
             all_markers[i].setMap(null);
-          
-            if (what_is_it == "zombie") {
-              alert("roawr roar growl, you've ran into a zombie!");
-              score -= 300;
-              
-            else if (what_is_it == ("diamond") {
-              alert("Ooo shoot, a DIAMOND!");
-              score += 450;
-              
-	    }
+          }
+    }
           
     }
     </script>
