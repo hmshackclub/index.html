@@ -32,7 +32,7 @@
     
     <script>
     var zombie_map;
-    var score;
+    var score = 0;
     var tolerance = 1;
     var old_position;
     var all_markers = [];
@@ -59,7 +59,17 @@
             37.832201 -122.233619 swords. png
             37.841289 -122.232585 hospital.png`;
     var markers = data.split("\n");
-    
+      
+      if (what_is_it == "zombie") {
+    alert("Oh no, you ran into a zombie!");
+    score -= 300;
+}
+
+else if (what_is_it == "diamond") {
+    alert("Ooo! Shiny!");
+    score += 450;
+}
+      
     function initMap() {
         zombie_map = new google.maps.Map(document.getElementById('zombie_map'), {zoom: 19,center: {lat: 37.841277, lng: -122.232438}
         });    
