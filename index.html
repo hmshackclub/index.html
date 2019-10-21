@@ -1,9 +1,9 @@
 <html>
   <head>
-    <title>My page title</title>
+    <title>Zombie Game</title>
       <meta name="description" content="Zombie map within Whangamata">
       <meta name="keywords" content="Zombie, Whangamata, map">
-      <meta name="author" content="Ian Fulton">
+      <meta name="author" content="8th Grade Tech">
     
      <h1 id="timer"> this value will be changed by JS </h1>
       
@@ -33,6 +33,18 @@
       
     
     <script>
+    let timer = 0;
+setInterval(
+    // this is the code that will be called each interval.
+    () => {
+        timer += 1;
+        document.getElementById("timer").content = timer;
+    },
+    // this is how long in milliseconds in between intervals.
+    // i.e. the code above will be called every 100 milliseconds.
+    100
+)
+                                                 
     var zombie_map;
     var score = 0;
     var tolerance = 1;
